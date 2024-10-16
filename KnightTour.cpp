@@ -49,12 +49,12 @@ void gen(int x, int y, int cur)
 
 signed main()
 {
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+	
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
 	cout.tie(nullptr);
-	
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
 
 	cin >> n;
 	grid[0][0] = 0;
