@@ -13,14 +13,11 @@ using namespace std;
 const int N = 12;
 vector<vector<int>> grid(N, vector<int>(N, -1));
 int n;
-// bool flag = false;
 
 const vector<pair<int, int>> moves = {{2, 1}, {2, -1}, {-2, 1}, {-2, -1}, {1, 2}, {-1, 2}, {1, -2}, {-1, -2}};
 
 void gen(int x, int y, int cur)
 {
-	// if (flag)
-	// 	return;
 	if (cur == n * n)
 	{
 		for (int i = 0; i < n; i++)
@@ -30,7 +27,6 @@ void gen(int x, int y, int cur)
 			cout << endl;
 		}
 		cout << endl;
-		// flag = true;
 		return;
 	}
 
@@ -67,14 +63,14 @@ signed main()
 		return 0;
 	}
 
-	for (int i = 0; i < n; i++)
-		for (int j = 0; j < n; j++)
-		{
+	int i = 0, j = 0;
+	// for (int i = 0; i < n; i++)
+		// for (int j = 0; j < n; j++)
+		// {
 			grid[i][j] = 0;
 			gen(i, j, 1);
 
 			grid[i][j] = -1;
-			// flag = false;
-		}
+		// }
 	return 0;
 }
